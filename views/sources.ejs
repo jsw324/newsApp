@@ -1,0 +1,26 @@
+<% include shared/header %>
+
+
+<!-- news items -->
+      <div class="row">
+        <% for (var i = 0; i < data.sources.length; i++) { %>
+        <div class="col s1 m6 l3">
+          <div class="card small scale-transition scale-out">
+            <div class="card-image">
+              <img class="responsive-img" src=<%= data.sources[i].urlsToLogos.large %>>
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content black-text">
+              <h5><%= data.sources[i].name %></h5>
+            </div>
+            <div class="card-action">
+
+              <a href=<%= `/api/sources/${data.sources[i].id}` %>><%= data.sources[i].name %></a>
+            </div>
+          </div>
+        </div>
+            <% } %>
+      </div>
+
+
+<% include shared/footer %>

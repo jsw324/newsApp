@@ -1,0 +1,23 @@
+<% include shared/header %>
+<!-- news items -->
+      <div class="row">
+        <% for (var i = 0; i < data.articles.length; i++) { %>
+        <div class="col s12 m6 l3">
+          <div class="card large">
+            <div class="card-image">
+              <img src=<%= data.articles[i].urlToImage %>>
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content black-text">
+              <h5><%= data.articles[i].title %></h5>
+              <h6><%= data.articles[i].description %></h6>
+            </div>
+            <div class="card-action">
+              <a href=<%= data.articles[i].url %>><%= data.source %></a>
+            </div>
+          </div>
+        </div>
+            <% } %>
+      </div>
+
+<% include shared/footer %>
