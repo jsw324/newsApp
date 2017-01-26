@@ -7,7 +7,7 @@
         <div class="col s1 m6 l3">
           <div class="card small scale-transition scale-out">
             <div class="card-image">
-              <img class="responsive-img" src=<%= data.sources[i].urlsToLogos.large %>>
+              <a href=<%= `/api/sources${data.sources[i].id}`%>><img class="responsive-img" src=<%= data.sources[i].urlsToLogos.large %>></a>
               <span class="card-title"></span>
             </div>
             <div class="card-content black-text">
